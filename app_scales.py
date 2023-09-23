@@ -8,13 +8,14 @@ st.set_page_config(layout="wide")
 
 # Check if we are in the production environment
 if 'RAILWAY_GIT_COMMIT_SHA' in os.environ:
-    st.secrets["OPENAI_API_KEY"] = os.environ["OPENAI_API_KEY"]
-    st.secrets["REPLICATE_API_KEY"] = os.environ["REPLICATE_API_KEY"]
-    st.secrets["ELEVENLABS_API_KEY"] = os.environ["ELEVENLABS_API_KEY"]
+    openai.api_key = os.environ["OPENAI_API_KEY"]
+    st.session_state.client = replicate.Client(api_token=os.environ["REPLICATE_API_KEY"])
+    set_api_key(os.environ["ELEVENLABS_API_KEY"])
 
-openai.api_key = st.secrets['OPENAI_API_KEY']
-st.session_state.client = replicate.Client(api_token=st.secrets['REPLICATE_API_KEY'])
-set_api_key(st.secrets["ELEVENLABS_API_KEY"])
+else:
+    openai.api_key = st.secrets['OPENAI_API_KEY']
+    st.session_state.client = replicate.Client(api_token=st.secrets['REPLICATE_API_KEY'])
+    set_api_key(st.secrets["ELEVENLABS_API_KEY"])
 
 if "title" not in st.session_state:
     st.session_state.title = 'Gen-Branch: Interactive Audio-Visual Simulation Generator'
