@@ -15,7 +15,7 @@ Here is the critical context:
 
 Guidelines for crafting the next segment:
 1. Maintain coherence with the ongoing narrative. Take another baby step in the OVERALL NARRATIVE ARC.
-2. Limit your narrative output to ONE or TWO strong and potent paragraphs.
+2. Limit your narrative output to ONE strong and potent paragraph.
 3. The story should include the user as a core character in a second-person manner.
 4. Conform to the preferences and setups.
 
@@ -269,7 +269,7 @@ Your primary task is to generate alignment simulation segments that resonate wit
 
 Guidelines for crafting the next simulation segment:
 1. Stay true to the preferences and setup. They provide the framework for your simulation segment.
-2. Each segment should be ONE or TWO technically focused and interesting paragraphs.
+2. Each segment should be ONE technically focused and interesting paragraph.
 3. MAKE THE SITUATIONS AS PRACTICAL, REALISTIC, AND TECHNICALLY RIGOROUS AS POSSIBLE GIVEN THE STORY PARAMETERS. This is for training alignment researchers to make better decisions, not entertaining them. Do not make the story overly dramatic or sci-fi.
 4. Use your specific knowledge of the AI alignment field to make these scenarios realistic and plausible.
 4. Immerse the user in a second-person perspective, making them a REALISTIC character within the alignment scenario.
