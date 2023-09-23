@@ -115,7 +115,7 @@ elif st.session_state.mode == "Interactive Narrative Mode":
             elif not st.session_state.themes:
                 st.warning("Please input any key themes or ideas you want in the story")
             else:
-                display_loading("Preferences submitted. Generating your story prompt...")
+                display_loading("Preferences submitted. Generating audiovisual simulation...")
                 st.session_state.preferences = generate_story_prompt(preference_maker.format(
                                 seriousness_description=st.session_state.seriousness,
                                 whimsicality_description=st.session_state.whimsicality,
@@ -255,7 +255,7 @@ elif st.session_state.mode == 'Alignment Simulation Mode':
             elif not st.session_state.themes:
                 st.warning("Please input any key themes or ideas you want in the story")
             else:
-                display_loading("Preferences submitted. Generating your story prompt...")
+                display_loading("Preferences submitted. Generating audiovisual simulation...")
                 st.session_state.preferences = generate_alignment_prompt(alignment_maker.format(
                 organization_type_description=st.session_state.organization_type_description,
                 cooperation_level_description=st.session_state.cooperation_level_description,
