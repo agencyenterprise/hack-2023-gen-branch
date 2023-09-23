@@ -4,7 +4,7 @@ import replicate
 import os
 from elevenlabs import set_api_key, voices, generate, stream
 
-st.set_page_config(layout="wide", page_title="GenBranch")
+st.set_page_config(layout="wide")
 
 # Check if we are in the production environment
 if 'RAILWAY_GIT_COMMIT_SHA' in os.environ:
