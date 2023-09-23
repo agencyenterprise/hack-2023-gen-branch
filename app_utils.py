@@ -50,7 +50,7 @@ class Story:
         last_chunk = self.get_last_system_message()
         user_choice = self.messages[-1]["content"] if self.messages and self.messages[-1]["sender"] == "user" else "No decision made yet."
         
-        print("CURRENT TEMPLATE:", system_template.format(preferences=self.user_preferences, story_so_far=self.summary, last_chunk=last_chunk, user_choice=user_choice))
+        # print("CURRENT TEMPLATE:", system_template.format(preferences=self.user_preferences, story_so_far=self.summary, last_chunk=last_chunk, user_choice=user_choice))
         return system_template.format(preferences=self.user_preferences, story_so_far=self.summary, last_chunk=last_chunk, user_choice=user_choice)
 
     def generate_text(self, prompt):
@@ -90,7 +90,7 @@ class Story:
         new_chunk = self.generate_text(prompt)
         self.get_summary(new_chunk)  # Update the summary after generating a new chunk
         self.messages.append({"sender": "system", "content": new_chunk})
-        print("System message added:", self.messages[-1]["content"])
+        # print("System message added:", self.messages[-1]["content"])
 
 class AlignmentSim(Story):
     def __init__(self, user_preferences):
@@ -224,7 +224,7 @@ def generate_illustration_prompt(story_chunk, style):
 def generate_illustration(story_chunk, style, client):
     # Generate the detailed illustration prompt from the story chunk
     illustration_prompt = generate_illustration_prompt(story_chunk, style)
-    print("ILLUSTRATION PROMPT:", illustration_prompt)
+    # print("ILLUSTRATION PROMPT:", illustration_prompt)
     # Pass the generated prompt to get the image
     image_output = get_image_from_prompt(illustration_prompt + 'NO TEXT, NO WORDS', client)
     
@@ -255,7 +255,7 @@ def generate_title(title_prompt):
 # alignment stuff!!!!!!
 
 def generate_alignment_prompt(preferences):
-    print('INPUTS:', preferences)
+    # print('INPUTS:', preferences)
     response = openai.ChatCompletion.create(
         model="gpt-4",
         temperature=0.25,  # You may adjust this as per your requirements
