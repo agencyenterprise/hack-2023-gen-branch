@@ -121,7 +121,7 @@ elif st.session_state.mode == "Interactive Narrative Mode":
                                 humor_description=st.session_state.humor_quotient,
                                 themes=st.session_state.themes
                                 ))
-                print('PREFERENCES', st.session_state.preferences)
+                # print('PREFERENCES', st.session_state.preferences)
                 # Display or further process the story_prompt as
 
                 # Your logic for story initialization goes here, using the descriptions from st.session_state.selected_descriptions
@@ -258,7 +258,7 @@ elif st.session_state.mode == 'Alignment Simulation Mode':
                 themes=st.session_state.themes
                     ))
 
-                print('PREFERENCES', st.session_state.preferences)
+                # print('PREFERENCES', st.session_state.preferences)
                 # Display or further process the story_prompt as
 
                 # Your logic for story initialization goes here, using the descriptions from st.session_state.selected_descriptions
