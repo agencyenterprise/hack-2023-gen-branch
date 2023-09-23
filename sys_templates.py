@@ -102,6 +102,8 @@ Once you do this, append a three more phrases that explicitly include and are re
 
 Return the full list of SIX or SEVEN phrases ONLY. The entire list should be no longer than 40 words in total. DONT FORGET TO INCLUDE STYLE RELATED PHRASES!
 
+NEVER OUTPUT ANY NSFW CONTENT OF ANY KIND.
+
 Example output: 'Glowing book, soft glow of the setting sun, Labyrinth of narrow alleyways, Weight of centuries of history, Cobblestone streets; STYLE: trippy ethereal glow. Hyperrealistic 4K HD.'
 """
 
