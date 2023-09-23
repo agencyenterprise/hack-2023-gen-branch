@@ -18,7 +18,7 @@ else:
     set_api_key(st.secrets["ELEVENLABS_API_KEY"])
 
 if "title" not in st.session_state:
-    st.session_state.title = 'GenBranch: Interactive Audio-Visual Simulation Generator'
+    st.session_state.title = 'GenBranch: Interactive Audiovisual Narrative Generator'
 
 st.markdown(f'<h1 style="text-align:center; font-size:40px;">{st.session_state.title}</h1>', unsafe_allow_html=True)
 
