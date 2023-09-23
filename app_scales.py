@@ -1,9 +1,16 @@
 import streamlit as st
 from app_utils import *
 import replicate
+import os
 from elevenlabs import set_api_key, voices, generate, stream
 
 st.set_page_config(layout="wide")
+
+# Check if we are in the production environment
+if 'RAILWAY_GIT_COMMIT_SHA' in os.environ:
+    st.secrets["OPENAI_API_KEY"] = os.environ["OPENAI_API_KEY"]
+    st.secrets["REPLICATE_API_KEY"] = os.environ["REPLICATE_API_KEY"]
+    st.secrets["ELEVENLABS_API_KEY"] = os.environ["ELEVENLABS_API_KEY"]
 
 openai.api_key = st.secrets['OPENAI_API_KEY']
 st.session_state.client = replicate.Client(api_token=st.secrets['REPLICATE_API_KEY'])
