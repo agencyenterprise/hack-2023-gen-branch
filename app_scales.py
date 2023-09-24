@@ -90,7 +90,7 @@ elif st.session_state.mode == "Interactive Narrative Mode":
                 value = st.slider(narrative_display_names[axis], 1, 5, st.session_state[axis], key=widget_key)
                 st.session_state[axis] = value
 
-            st.session_state.themes = st.text_input("Input any themes or specific ideas you want included in the story (e.g., futuristic AI, medieval castle, betrayal and passion, etc.):")
+            st.session_state.themes = st.text_input("Input any specific element(s) you want included in your story. This can be a specific genre, setting(s), item(s), character(s), or theme(s). For example: enthralling who-done-it mystery; set in futuristic city; ancient artifacts; characters trapped between two worlds; the ethical dilemmas of building AI. Your choices will guide the story's development:")
 
             # Gender selection
             gender = st.radio("Select gender of narrator:", ['Male', 'Female'], key="narrator_gender")
